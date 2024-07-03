@@ -1,0 +1,53 @@
+.divider {
+    border-left: 1px solid #ddd;
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-nav .nav-item {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.navbar-brand img {
+    height: 40px; 
+}
+
+.navbar-custom .btn {
+    margin-left: 20px;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.info-section .d-flex {
+    gap: 0.3rem;
+}
+
+.header-item {
+    font-weight: bold;
+}
+
+.nav-item a {
+    color: white;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.footer-custom {
+    background-color: #161f1e;
+    color: white;
+}
