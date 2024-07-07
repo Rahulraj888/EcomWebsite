@@ -1,3 +1,18 @@
+.dropdown-menu li a{
+    color: black;
+}
+
+.nav-item a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.header-items a{
+    background-color: white;
+    color: #00693E;
+    font-weight: bold;
+}
+
 .divider {
     border-left: 1px solid #ddd;
     height: 24px;
@@ -45,9 +60,17 @@ p {
 
 .nav-item:hover {
     text-decoration: underline;
+    font-size: 1.1em;
 }
 
 .footer-custom {
     background-color: #161f1e;
     color: white;
+    text-decoration: underline;
+}
+
+.footer-about {
+    color:white; 
+    font-weight: bold;
+    text-decoration: underline;
 }
