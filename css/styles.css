@@ -1,16 +1,15 @@
-.dropdown-menu li a{
-    color: black;
+/* commom for both headers */
+.navbar {
+    padding-block: 15px;
 }
 
-.nav-item a:hover {
-    color: white;
-    text-decoration: underline;
+/*first header */
+.navbar-custom {
+    border-top: 10px solid #00693E;
 }
 
-.header-items a{
-    background-color: white;
-    color: #00693E;
-    font-weight: bold;
+.navbar-brand img {
+    height: 40px; 
 }
 
 .divider {
@@ -20,9 +19,23 @@
     margin-right: 10px;
 }
 
-.navbar-custom {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+
+/* second header */
+.header-icons a{
+    background-color: white;
+    color: #00693E;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-item a:hover {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.1em;   
+}
+
+.dropdown-menu li a{
+    color: black;
 }
 
 .navbar-nav .nav-item {
@@ -34,16 +47,8 @@ p {
     margin: 0;
 }
 
-.navbar-brand img {
-    height: 40px; 
-}
-
-.navbar-custom .btn {
+.navbar .btn {
     margin-left: 20px;
-}
-
-.navbar-brand img {
-    height: 40px;
 }
 
 .info-section .d-flex {
@@ -58,19 +63,39 @@ p {
     color: white;
 }
 
-.nav-item:hover {
-    text-decoration: underline;
-    font-size: 1.1em;
+.icon {
+    font-size: 1.5rem;
 }
 
+.navbar-nav .nav-link {
+    color: white; 
+}
+
+/* footer */
 .footer-custom {
     background-color: #161f1e;
     color: white;
+    font-weight: bold;
+}
+
+.footer-custom .nav-item {
     text-decoration: underline;
 }
 
-.footer-about {
-    color:white; 
-    font-weight: bold;
-    text-decoration: underline;
+
+@media (max-width: 786px) {
+    .info-section {
+        visibility: hidden;
+        display: none;
+    }
+
+    .navbar-custom .navbar-brand {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .carousel {
+        display: none;
+    }
 }
+
