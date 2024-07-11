@@ -1,0 +1,29 @@
+.container {
+    margin-top: 50px;
+}
+.form-container {
+    border: 1px solid #e3e3e3;
+    padding: 30px;
+    border-radius: 10px;
+    height: 100%;
+}
+.form-container .btn {
+    width: 100%;
+}
+.equal-height {
+    display: flex;
+    align-items: stretch;
+}
+.equal-height > div {
+    display: flex;
+    flex-direction: column;
+}
+.form-container .btn {
+    width: auto; 
+    padding: 5px 20px;
+    font-size: 0.875rem;
+}
+
+.form-container label, .form-container p, .form-container a {
+    color: #8D9797; 
+}
