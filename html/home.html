@@ -7,10 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <style>
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light navbar-custom">
@@ -93,7 +94,7 @@
         </div>
     </nav>
 
-    <div id="carouselExampleCaptions" class="carousel slide test" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -102,23 +103,32 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="https://www.vrsitrentals.com/shop/wp-content/uploads/2024/02/Laptop-Banner1920by600.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class = "carousel-custom">Second slide label</h5>
-            <p class = "carousel-custom">Some representative placeholder content for the second slide.</p>
+          <div class="carousel-caption d-none d-md-block text-start">
+            <div class="d-flex flex-column align-items-start justify-content-center h-100 carousel-custom">
+              <h1 class="display-3 fw-bold my-2">Laptops</br>Rentals</h1>
+              <p class="my-2">Affordable, Upgraded and Updated .. Laptop Rentals on your Finger Tips</p>
+              <a href="#" class="btn btn-primary btn-lg b my-2">RENT NOW</a>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://www.vrsitrentals.com/shop/wp-content/uploads/2024/02/Macbook-Banner1920by600.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class = "carousel-custom">Second slide label</h5>
-            <p class = "carousel-custom">Some representative placeholder content for the second slide.</p>
+          <div class="carousel-caption d-none d-md-block text-start">
+            <div class="d-flex flex-column align-items-start justify-content-center h-100 carousel-custom">
+              <h1 class="display-3 fw-bold my-2">Macbook</br>Rentals</h1>
+              <p class="my-2">Exploring a Diversified Technology in umpteen Variants of MacBook Rentals</p>
+              <a href="#" class="btn btn-primary btn-lg my-2">RENT NOW</a>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://www.vrsitrentals.com/shop/wp-content/uploads/2024/02/iPadBanner1920by600.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class = "carousel-custom">Third slide label</h5>
-            <p class = "carousel-custom">Some representative placeholder content for the third slide.</p>
+          <div class="carousel-caption d-none d-md-block text-start">
+            <div class="d-flex flex-column align-items-start justify-content-center h-100 carousel-custom">
+              <h1 class="display-3 fw-bold my-2">IPAD</br>Rentals</h1>
+              <p class="my-2">Upbringing and Fostering the Apex of Technology with renting iPads</p>
+              <a href="#" class="btn btn-primary btn-lg my-2">RENT NOW</a>
+            </div>
           </div>
         </div>
       </div>
@@ -163,8 +173,8 @@
         <div class="col-md-6">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <h3 class="mb-0">Rent Laptops</h3>
-              <p class="card-text my-3">Laptops which are not only Upgraded, but also affordable.</p>
+              <h3 class="mb-0">Rent MacBooks</h3>
+              <p class="card-text my-3">Enliven a Spirit of that Sleeky Aesthetic of the most Technical MacBooks.</p>
               <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
                 View All
                 <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
@@ -231,7 +241,85 @@
         </div>
       </div>
     </div>
-     
+
+   <div class="container container-tesinominals rounded">
+      <div class="d-flex justify-content-center fas fa-heart"></div>
+      <p class="tag">Our customers love</p>
+      <h1 class="text-primary text-center head">What we do</h1>
+      <div class="owl-carousel owl-theme">
+         <div class="owl-item">
+            <div class="card d-flex flex-column">
+               <div class="mt-2"> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star-half-alt active-star"></span> </div>
+               <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+               <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+               <div class="d-flex flex-row profile pt-4 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="rounded-circle"> 
+                  <div class="d-flex flex-column pl-2">
+                     <div class="name">Megan</div>
+                     <p class="text-muted designation">CEO of My Company</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="owl-item">
+            <div class="card d-flex flex-column">
+               <div class="mt-2"> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star-half-alt active-star"></span> </div>
+               <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+               <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+               <div class="d-flex flex-row profile pt-4 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="rounded-circle"> 
+                  <div class="d-flex flex-column pl-2">
+                     <div class="name">Megan</div>
+                     <p class="text-muted designation">CEO of My Company</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="owl-item">
+            <div class="card d-flex flex-column">
+               <div class="mt-2"> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star-half-alt active-star"></span> </div>
+               <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+               <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+               <div class="d-flex flex-row profile pt-4 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="rounded-circle"> 
+                  <div class="d-flex flex-column pl-2">
+                     <div class="name">Megan</div>
+                     <p class="text-muted designation">CEO of My Company</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="owl-item">
+            <div class="card d-flex flex-column">
+               <div class="mt-2"> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star-half-alt active-star"></span> </div>
+               <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+               <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+               <div class="d-flex flex-row profile pt-4 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="rounded-circle"> 
+                  <div class="d-flex flex-column pl-2">
+                     <div class="name">Megan</div>
+                     <p class="text-muted designation">CEO of My Company</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="owl-item">
+            <div class="card d-flex flex-column">
+               <div class="mt-2"> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star active-star"></span> <span class="fas fa-star-half-alt active-star"></span> </div>
+               <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+               <div class="testimonial"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores molestias veniam inventore itaque eius iure omnis, temporibus culpa id. </div>
+               <div class="d-flex flex-row profile pt-4 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="rounded-circle"> 
+                  <div class="d-flex flex-column pl-2">
+                     <div class="name">Megan</div>
+                     <p class="text-muted designation">CEO of My Company</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+         
     <div class="container-fluid footer-custom">
       <footer class="pt-5">
         <div class="row">
@@ -278,6 +366,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="/js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script> 
 </body>
 </html>
