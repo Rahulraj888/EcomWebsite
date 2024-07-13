@@ -5,7 +5,7 @@
 
 /*first header */
 .navbar-custom {
-    border-top: 10px solid #00693E;
+    border-top: 10px solid #fc8902;;
 }
 
 .navbar-brand img {
@@ -25,7 +25,7 @@
     background-color: white;
     color: #00693E;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 .nav-item a:hover {
@@ -64,7 +64,8 @@ p {
 }
 
 .icon {
-    font-size: 1.5rem;
+    font-size: 2em;
+    color: #217d08;
 }
 
 .navbar-nav .nav-link {
