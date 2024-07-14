@@ -3,7 +3,7 @@ body {
     margin: 0;
   }
   
-  .header {
+  .header-aboutus {
     background-image: url('images/officebackground.jpg');
     background-size: cover; /* This makes the image cover the entire background */
     background-position: center; /* This centers the background image */
@@ -30,7 +30,7 @@ body {
     text-align: center;
   }
   
-  .container {
+  .container-aboutus {
     padding: 16px;
     margin: auto;
     max-width: 960px;
