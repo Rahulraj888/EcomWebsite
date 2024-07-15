@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRS Login Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>VRS Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/EcomWebsite/css/login.css">
     <link rel="stylesheet" href="/EcomWebsite/css/styles.css">
-    <style>
-    </style>
+    <link rel="stylesheet" href="/EcomWebsite/css/contact-us.css">
 </head>
 <body>
     <nav class="navbar navbar-light bg-light navbar-custom">
@@ -91,49 +88,55 @@
             </div>
         </div>
     </nav>
-
-    <div class="container my-5">
-        <div class="row equal-height">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h2>Login</h2>
-                <div class="form-container mt-5">
-                    <form>
-                        <div class="form-group">
-                            <label for="loginEmail">Username or email address <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" id="loginEmail">
-                        </div>
-                        <div class="form-group mt-3">
-                            <label for="loginPassword">Password <span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" id="loginPassword">
-                        </div>
-                        <div class="form-group form-check mt-3">
-                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Remember me</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary mt-3">Log in</button>
-                        <a href="#" class="d-block mt-2">Lost your password?</a>
-                    </form>
-                </div>
+    
+    <section class="background-image-section">
+        <div class="overlay">
+            <div class="heading">
+                <h1>Contact Us</h1>
+                <p> Feel free to contact Us</p>
             </div>
-            <div class="col-md-6">
-                <h2>Register</h2>
-                <div class="form-container mt-5">
-                    <form>
-                        <div class="form-group mt-3">
-                            <label for="registerEmail">Email address <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" id="registerEmail">
-                        </div>
-                        <p class="mt-3">A link to set a new password will be sent to your email address.</p>
-                        <p class="mt-3">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#">privacy policy</a>.</p>
-                        <button type="submit" class="btn btn-primary btn-sm mt-3">Register</button>    
-                    </form>
+        </div>
+    </section>
+    <div class="container-p">
+        <h1>Let's start a project together </h1>
+        <p>VRS IT Rentals have been in the world of rentals since ages. We have a huge customer base around the world who utilize our services. We provide solutions to all your rental problems at VRS IT Rentals which is considered to be a one stop shop for our esteemed customers.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="left">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you. Please reach out to us using the information below or fill out the form on the right.</p>
+            <div class="card">
+                <i class="fa-solid fa-location-dot" style="color: #000080;"></i><br>
+                <div>
+                    <p>1234 Street Name</p>
+                    <p>City, Country</p>
+                    <p>Call Support: (123) 456-7890</p>
                 </div>
             </div>
         </div>
+        <div class="right">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Mobile Number" required>
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </div>
-    <!-- Footer Part -->
-     <!-- Orange line -->
+    <br>
+    <div class="container">
+        <h1 class="map text-center">Location Map</h1>
+    </div>    
+    <div id="map">
+        <!-- Map content will be loaded here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.27444593903!2d78.46694297493612!3d17.44657358345071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91a35ffc997d%3A0xd9d676d5c641c85b!2sVRSIT%20Rentals%20-%20Hire%20Laptops%2C%20MacBooks%20in%20Hyderabad%20and%20Secunderabad!5e0!3m2!1sen!2sca!4v1721071723863!5m2!1sen!2sca" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+<!-- Footer Part -->
+    <!-- Orange line -->
     <div class="orange-line"></div> <!-- Orange line above footer -->
+
     <div class="container-fluid footer-custom">
         <footer class="pt-5">
           <div class="row">
@@ -143,7 +146,7 @@
                 <li class="nav-item mb-2"><a href="#">Terms and Conditions</a></li>
                 <li class="nav-item mb-2"><a href="#">Privacy Policy</a></li>
                 <li class="nav-item mb-2"><a href="/html/about-us.html">About Us</a></li>
-                <li class="nav-item mb-2"><a href="/html/ContactUs.html">Contact Us</a></li>
+                  <li class="nav-item mb-2"><a href="/html/ContactUs.html">Contact Us</a></li>
               </ul>
             </div>
       
@@ -177,9 +180,12 @@
             </ul>
           </div>
         </footer>
-    </div>
+      </div>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://kit.fontawesome.com/989f8a3afc.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
