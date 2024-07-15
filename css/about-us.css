@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header-aboutus {
+  background-image: url('images/officebackground.jpg');
+  background-size: cover; /* This makes the image cover the entire background */
+  background-position: center; /* This centers the background image */
+  background-repeat: no-repeat;
+  padding: 50px;
+  text-align: center;
+}
+
+.back {
+  background-image: url('images/backgroundwood.jpeg');
+  background-size: cover; /* This makes the image cover the entire background */
+  background-position: center; /* This centers the background image */
+  background-repeat: no-repeat;
+  padding: 10px;
+  text-align: center;
+}
+
+.missback {
+  background-image: url('images/geybackground.jpeg');
+  background-size: cover; /* This makes the image cover the entire background */
+  background-position: center; /* This centers the background image */
+  background-repeat: no-repeat;
+  padding: 10px;
+  text-align: center;
+}
+
+.container-aboutus {
+  padding: 16px;
+  margin: auto;
+  max-width: 960px;
+  text-align: justify;
+}
+
+.row-aboutus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 25%;
+  padding: 10px;
+}
+
+.column-2 {
+  flex: 25%;
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.img-container img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.icon-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}

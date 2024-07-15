@@ -1,0 +1,151 @@
+/* Custom background color for the navbar */
+.bg-blue {
+    background-color: #2F53A3EB; /* Bootstrap primary color */
+    padding: 0; /* Remove padding from navbar */
+}
+
+
+/* Style for the background image section */
+.background-image-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    background-image: url(/EcomWebsite/images/contact-us/bg.jpg); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Black overlay with 50% opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.heading h1 {
+    font-size: 3em; /* Adjust the font size as needed */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.heading p {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    margin: 10px 0 0;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.container-p {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container-p h1 {
+    font-size: 2em;
+    color: #333;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.container-p p {
+    font-size: 1.2em;
+    color: #666;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+/* Contact Us Section */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.contact-container .left, .contact-container .right {
+    padding: 20px;
+    flex: 1;
+}
+
+.contact-container .left {
+    border-right: 1px solid #ddd;
+}
+
+.contact-container .left h2 {
+    font-size: 2em;
+    color: #333;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.contact-container .left p {
+    font-size: 1.2em;
+    color: #666;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.contact-container .card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px #000080; /* Orange shadow effect */
+}
+
+.contact-container .card i {
+    font-size: 2em;
+    margin-right: 20px;
+    color: #007BFF;
+}
+
+.contact-container .right form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px #000080; /* orange shadow effect */
+    padding: 20px;
+}
+
+.contact-container .right form input, .contact-container .right form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.contact-container .right form button {
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #000080;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Consistent font family */
+}
+
+.contact-container .right form button:hover {
+    background-color: #000080;
+}
+#map{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+iframe{
+    width: 100%;
+}
