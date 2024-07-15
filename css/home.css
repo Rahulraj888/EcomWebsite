@@ -32,7 +32,7 @@ img{
 }
 
 .fa-heart {
-  color: rgba(255, 230, 0, 0.959);
+  color: #fc8902;
   font-size: 30px
 }
 
@@ -50,12 +50,12 @@ img{
 }
 
 .active-star {
-  color: #FBC02D;
+  color: #fc8902;
   margin-bottom: 8px
 }
 
 .active-star:hover {
-  color: #F9A825;
+  color: #fc8902;
   cursor: pointer
 }
 

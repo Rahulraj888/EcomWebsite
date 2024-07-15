@@ -13,7 +13,7 @@
 
 /*first header */
 .navbar-custom {
-    border-top: 10px solid #fc8902;;
+    border-top: 7px solid #fc8902;;
 }
 
 .navbar-brand img {
@@ -108,3 +108,9 @@ p {
     }
 }
 
+.orange-line {
+    height: 7px;
+    background-color: #fc8902;
+    width: 100%;
+    position: relative;
+}
