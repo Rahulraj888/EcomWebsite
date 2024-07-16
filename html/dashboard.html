@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRS Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- header 1 -->
+  <nav class="navbar navbar-light bg-light navbar-custom">
+      <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="#">
+              <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap">
+              VRS Technologies L.L.C
+          </a>
+          <div class="d-flex align-items-center px-5 info-section">
+              <div class="me-4 d-flex align-items-center">
+                  <i class="bi bi-geo-alt px-2 icon"></i> 
+                  <div class="d-flex flex-column address">
+                      <p class="header-item">Begumpet</p>
+                      <p>Hyderabad</p>
+                  </div>
+                  <div class="divider"></div>
+              </div>
+              <div class="me-4 d-flex align-items-center">
+                  <i class="bi bi-telephone px-2 icon"></i>
+                  <div class="d-flex flex-column address">
+                    <p class="header-item">Mobile</p>
+                    <p>+91 8123457760</p>
+                </div>
+                  <div class="divider"></div>
+              </div>
+              <div class="d-flex align-items-center">
+                  <i class="bi bi-envelope px-2 icon"></i>
+                  <div class="d-flex flex-column address">
+                    <p class="header-item">Mail us</p>
+                    <p>support@vrsit.com</p>
+                  </div>
+                
+              </div>
+          </div>
+      </div>
+  </nav>
+
+  <!-- header2 -->
+  <nav class="navbar navbar-expand-lg" style="background-color:#1F51FF;">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav-items" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="/html/home.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html/about-us.html">ABOUT US</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          RENTALS
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item dropdown-item" href="#">LAPTOP</a></li>
+                          <li><a class="dropdown-item" href="#">IPADS</a></li>
+                          <li><a class="dropdown-item" href="#">PRINTER</a></li>
+                          <li><a class="dropdown-item" href="#">MacBooks</a></li>
+                          <li><a class="dropdown-item" href="#">PROJECTOR</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html/ContactUs.html">CONTACT US</a>
+                  </li>
+              </ul>
+              <div class="d-flex align-items-center header-icons">
+                  <a class="btn btn-outline-primary" href="#">
+                      <i class="bi bi-person"></i>
+                  </a>
+                  <a class="btn btn-outline-primary" href="#">
+                      <i class="bi bi-cart"></i>
+                  </a>
+                  <a class="btn btn-primary" href="#">Call Us</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+<!-- ------------------------------- -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Filters Section -->
+        <div class="col-md-3">
+            <h5>Filter By Price</h5>
+            <input type="range" class="form-control-range" min="1" max="23999" id="priceRange">
+            <p>Price: ₹<span id="priceMin">1</span> - ₹<span id="priceMax">23999</span></p>
+
+            <h5>Filter By Categories</h5>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="laptop">
+                <label class="form-check-label" for="laptop">Laptop</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="ipad">
+                <label class="form-check-label" for="ipad">IPad</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="macbook">
+                <label class="form-check-label" for="macbook">MacBook</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="projector">
+                <label class="form-check-label" for="projector">Projector</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="printer">
+                <label class="form-check-label" for="printer">Printer</label>
+            </div>
+
+            <h5>Brand</h5>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="acer">
+                <label class="form-check-label" for="acer">Acer</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="apple">
+                <label class="form-check-label" for="apple">Apple</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dell">
+                <label class="form-check-label" for="dell">Dell</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lenovo">
+                <label class="form-check-label" for="lenovo">Lenovo</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hp">
+                <label class="form-check-label" for="hp">HP</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="sony">
+                <label class="form-check-label" for="sony">Sony</label>
+            </div>
+        </div>
+        
+        <!-- Products Section -->
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Acer Laptop">
+                        <div class="card-body">
+                            <h5 class="card-title">Acer Laptop</h5>
+                            <p class="card-text">₹999.00 – ₹7,199.00</p>
+                            <a href="#" class="btn btn-primary">Select Options</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell G15 5530">
+                        <div class="card-body">
+                            <h5 class="card-title">Dell G15 5530</h5>
+                            <p class="card-text">₹2,999.00 – ₹23,999.00</p>
+                            <a href="#" class="btn btn-primary">Select Options</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell Latitude 5450">
+                        <div class="card-body">
+                            <h5 class="card-title">Dell Latitude 5450</h5>
+                            <p class="card-text">₹799.00 – ₹7,199.00</p>
+                            <a href="#" class="btn btn-primary">Select Options</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell Latitude 5470">
+                        <div class="card-body">
+                            <h5 class="card-title">Dell Latitude 5470</h5>
+                            <p class="card-text">₹799.00 – ₹7,199.00</p>
+                            <a href="#" class="btn btn-primary">Select Options</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell Latitude 7440">
+                        <div class="card-body">
+                            <h5 class="card-title">Dell Latitude 7440</h5>
+                            <p class="card-text">₹799.00 – ₹5,599.00</p>
+                            <a href="#" class="btn btn-primary">Select Options</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell Latitude 7480">
+                        <div class="card-body">
+                            <h5 class="card-title">Dell Latitude 7480</h5>
+                            <p class="card-text">₹799.00 – ₹6,999.00</p>
+                            <a href="#" class="btn btn-primary">Select Options</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell Latitude 5450">
+                      <div class="card-body">
+                          <h5 class="card-title">Dell Latitude 5450</h5>
+                          <p class="card-text">₹799.00 – ₹7,199.00</p>
+                          <a href="#" class="btn btn-primary">Select Options</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell Latitude 5450">
+                    <div class="card-body">
+                        <h5 class="card-title">Dell Latitude 5450</h5>
+                        <p class="card-text">₹799.00 – ₹7,199.00</p>
+                        <a href="#" class="btn btn-primary">Select Options</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="https://via.placeholder.com/150" class="card-img-top" alt="Dell Latitude 5450">
+                  <div class="card-body">
+                      <h5 class="card-title">Dell Latitude 5450</h5>
+                      <p class="card-text">₹799.00 – ₹7,199.00</p>
+                      <a href="#" class="btn btn-primary">Select Options</a>
+                  </div>
+              </div>
+          </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!-- footer -->
+   <div class="container-fluid footer-custom">
+    <footer class="pt-5">
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#">Refund Policy</a></li>
+            <li class="nav-item mb-2"><a href="#">Terms and Conditions</a></li>
+            <li class="nav-item mb-2"><a href="#">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="/html/about-us.html">About Us</a></li>
+            <li class="nav-item mb-2"><a href="/html/ContactUs.html">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-3 mb-3">
+          <h5>Address</h5>
+          <address>
+            Address
+            VRS IT SMART SOLUTIONS PVT LTD<br><br>
+            1-11-252/49, 1st Floor, Flat No 102,<br>
+            Arcot House, ICICI Bank Line, Motilal Nehru Nagar, <br>
+            Beside Public Park, <br>
+            Begumpet Hyderabad, Telangana, <br>
+            Pin: 500016.<br><br>
+            Call us: +91 8125457760 <br>
+            Support: support@vrsitrentals.com
+        </address>
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <p>VRS IT Smart Solutions Pvt Ltd delivers reliable and significant IT Rental Services in India, UAE and Canada. Our Hands-On experience, Best principles, Qualified Technical team, guaranteed On-time Services, Affordable Prices, and Durable terms remain Efficient and Evergreen..</p>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-sm-row py-4 border-top">
+        <p>© COPYRIGHT 2024 VRS IT Smart Solutions Pvt Ltd. All Right Reserved.</p>
+        <ul class="list-unstyled d-flex mx-4">
+          <li class="mx-4 mt-2"><a class="btn btn-outline-primary" href="#"><i class="bi bi-twitter"></i></a></li>
+          <li class="mx-4 mt-2"><a class="btn btn-outline-primary" href="#"><i class="bi bi-instagram"></i></a></li>
+          <li class="mx-4 mt-2"><a class="btn btn-outline-primary" href="#"><i class="bi bi-facebook"></i></a></li>
+          <li class="mx-4 mt-2"><a class="btn btn-outline-primary" href="#"><i class="bi bi-youtube"></i></a></li>
+          <li class="mx-4 mt-2"><a class="btn btn-outline-primary" href="#"><i class="bi bi-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="/js/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script> 
+</body>
+</html>
