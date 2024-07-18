@@ -1,0 +1,75 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+.card-img {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.cart-img {
+    max-height: 50px;
+    object-fit: cover;
+}
+
+.list-group-item {
+    border: none;
+    padding: .75rem 1.25rem;
+}
+
+/* Add orange box shadow effect */
+.border-effect {
+    border: 2px solid transparent;
+    border-radius: .25rem;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px 2px #000080;
+}
+
+#uploadButton {
+    background-color: #000080;
+    color: white;
+}
+
+/* Style for the modal close button */
+.modal-content {
+    border-radius: .25rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    animation: modalFadeIn 0.5s;
+}
+
+.modal-header .close {
+    color: #ff0000; /* Red color */
+    border: 1px solid #ff0000; /* Red border */
+    border-radius: 50%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #fff;
+}
+
+.modal-header .close:hover {
+    background-color: #ffcccc; /* Light red background on hover */
+    text-decoration: none;
+}
+#modify{
+    background-color: #000080;
+    color: white;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

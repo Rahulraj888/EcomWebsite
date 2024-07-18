@@ -89,6 +89,68 @@
             </div>
         </div>
     </nav>
+
+    <!-- Main section will be there -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="border-effect">
+                    <h3>Items in Cart</h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Action</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                                <td><img src="/images/cart/c1.jpg" alt="Laptop" class="cart-img"></td>
+                                <td>Laptop on Rent</td>
+                                <td>1</td>
+                                <td>$50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="border-effect">
+                    <h3>Cart Totals</h3>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Subtotal</span>
+                            <strong>$50</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Deposit Fee</span>
+                            <strong>$10</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>GST (10%)</span>
+                            <strong>$5</strong>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong>$65</strong>
+                        </li>
+                    </ul>
+                    <button id="modify" class="btn btn-block mb-3">Proceed to Checkout</button>
+                    <div class="alert alert-info" role="alert">
+                        Before proceeding to checkout, please provide the required documents.
+                    </div>
+                    <button class="btn btn-secondary btn-block" id="uploadButton">Upload Documents</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Modal -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
          
     <div class="container-fluid footer-custom">
       <footer class="pt-5">
