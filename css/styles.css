@@ -81,9 +81,25 @@ p {
     color: white; 
 }
 
+/* cart count */
+.header-icons .btn {
+    position: relative;
+}
+
+#cart-count {
+    background-color: white; /* Match the header background color */
+    color: #217d08; /* Ensure the text is readable */
+    top: -20px;
+    right: -20px;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+}
+
 /* footer */
 .footer-custom {
     background-color: #161f1e;
+    /* background-color: #1F51FF; */
+    /* background-image: url("https://demo.hashthemes.com/total-plus/construction/wp-content/uploads/sites/9/2018/09/tools.jpg"); */
     color: white;
     font-weight: bold;
 }

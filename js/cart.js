@@ -1,19 +1,57 @@
 $(document).ready(function() {
-    // Show the modal when the upload button is clicked
+    let products = cartItems;
+    function renderCart() {
+        console.log("in render cart");
+        let cartItemsList = $('#cart-items');
+        cartItemsList.empty();
+        let subtotal = 0;
+        let depositFee = 10; 
+        let gstRate = 0.10; 
+
+        cartItems.forEach((product, index) => {
+            let productSubtotal = product.price * product.quantity;
+            subtotal += productSubtotal;
+
+            cartItemsList.append(`
+                <tr>
+                    <td><button class="btn btn-danger btn-sm delete-btn" data-index="${index}">Delete</button></td>
+                    <td><img src="${product.image}" alt="${product.name}" class="cart-img"></td>
+                    <td>${product.name}</td>
+                    <td>${product.quantity}</td>
+                    <td>$${productSubtotal.toFixed(2)}</td>
+                </tr>
+            `);
+        });
+
+        let gst = subtotal * gstRate;
+        let total = subtotal + depositFee + gst;
+
+        $('#subtotal').text(`$${subtotal.toFixed(2)}`);
+        $('#deposit-fee').text(`$${depositFee.toFixed(2)}`);
+        $('#gst').text(`$${gst.toFixed(2)}`);
+        $('#total').text(`$${total.toFixed(2)}`);
+    }
+
+    renderCart();
+
     $("#uploadButton").click(function() {
         $("#uploadModal").modal('show');
     });
 
-    // Handle the form submission
+
     $("#documentUploadForm").submit(function(event) {
         event.preventDefault();
-        // Handle form submission here
         alert("Documents uploaded successfully!");
         $("#uploadModal").modal('hide');
     });
 
-    // Ensure that the modal closes correctly when the close button is clicked
     $('#uploadModal').on('hidden.bs.modal', function () {
         console.log('Modal has been hidden');
+    });
+
+    $('#cart-items').on('click', '.delete-btn', function() {
+        let index = $(this).data('index');
+        cartItems.splice(index, 1);
+        renderCart(); 
     });
 });

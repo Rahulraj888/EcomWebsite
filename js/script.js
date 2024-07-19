@@ -1,24 +1,32 @@
-function initMap() {
-    // The location of the center
-    var center = {lat: -34.397, lng: 150.644};
-    // The map, centered at the location
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: center
-    });
-    // The marker, positioned at the center
-    var marker = new google.maps.Marker({
-        position: center,
-        map: map
-    });
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [
+    {
+        name: 'Laptop on Rent',
+        image: '/images/cart/c1.jpg',
+        quantity: 1,
+        price: 50
+    }
+];
+
+
+function updateCartCount() {
+    let cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cartItems.length;
 }
 
-// Load the Google Maps API script and initialize the map
-function loadScript() {
-    var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap";
-    script.async = true;
-    document.head.appendChild(script);
+
+function addToCart(product) {
+    cartItems.push(product);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartCount();
 }
 
-window.onload = loadScript;
+
+function removeFromCart(index) {
+    cartItems.splice(index, 1);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCartCount();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount(); 
+});
