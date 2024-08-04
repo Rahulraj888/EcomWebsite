@@ -17,6 +17,32 @@ const priceRange = document.getElementById('priceRange');
 const priceMin = document.getElementById('priceMin');
 const priceMax = document.getElementById('priceMax');
 
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        category: params.get('category') || '',
+        brand: params.get('brand') || '',
+        processor: params.get('processor') || '',
+        maxPrice: params.get('maxPrice') || priceRange.max
+    };
+}
+
+function setFiltersFromQueryParams() {
+    const params = getQueryParams();
+
+    if (params.category) {
+        document.getElementById(params.category.toLowerCase()).checked = true;
+    }
+    if (params.brand) {
+        document.getElementById(params.brand.toLowerCase()).checked = true;
+    }
+    if (params.processor) {
+        document.getElementById(params.processor.replace(' ', '-').toLowerCase()).checked = true;
+    }
+    priceRange.value = params.maxPrice;
+    priceMax.innerText = params.maxPrice;
+}
+
 priceRange.addEventListener('input', () => {
     priceMax.innerText = priceRange.value;
     filterProducts();
@@ -49,6 +75,11 @@ function filterProducts() {
 
     const maxPrice = parseInt(priceRange.value);
 
+    console.log('Selected Categories:', selectedCategories);
+    console.log('Selected Brands:', selectedBrands);
+    console.log('Selected Processors:', selectedProcessors);
+    console.log('Max Price:', maxPrice);
+
     const filteredProducts = products.filter(product => {
         const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
         const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
@@ -56,6 +87,8 @@ function filterProducts() {
         const matchesPrice = product.price <= maxPrice;
         return matchesCategory && matchesBrand && matchesProcessor && matchesPrice;
     });
+
+    console.log('Filtered Products:', filteredProducts);
 
     displayProducts(filteredProducts);
 }
@@ -93,4 +126,5 @@ function displayProducts(products) {
 }
 
 // Initial display of products
-displayProducts(products);
+setFiltersFromQueryParams();
+filterProducts();

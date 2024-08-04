@@ -46,6 +46,10 @@
     color: black;
 }
 
+.dropdown-menu li a:hover{
+    color: black;
+}
+
 .navbar-nav .nav-item {
     font-weight: bold;
     margin-left: 20px;
