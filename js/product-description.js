@@ -23,7 +23,16 @@ function loadProductDetails() {
         priceElement.innerHTML = `₹${product.price} <small>Exc GST per month + A Refundable Deposit to be added in Cart</small>`;
         document.querySelector('.background-image-section .heading h1').textContent = product.name;
         document.querySelector('.background-image-section').style.backgroundImage = `url(${product.background})`;
-        document.querySelector('.container .img-fluid').src = product.image;
+        
+        const mainImageElement = document.getElementById('main-product-image');
+        mainImageElement.src = product.image;
+
+        const thumbnailImages = document.querySelectorAll('.flex-control-thumbs img');
+        if (thumbnailImages.length > 0) {
+            thumbnailImages[0].src = product.image;      
+            thumbnailImages[1].src = product.background;  
+        }
+
         updatePrice(product.price);
         document.querySelector('.product-key-features p').textContent = `Processor: ${product.processor}, Brand: ${product.brand}`;
         document.querySelector('.product-meta p').textContent = `Category: ${product.category}`;
@@ -79,3 +88,9 @@ document.querySelector('.add-to-cart button').addEventListener('click', function
 
     addToCart(cartProduct);
 });
+
+
+function changeImage(element) {
+    var mainImage = document.getElementById('main-product-image');
+    mainImage.src = element.src;
+}

@@ -65,3 +65,41 @@
     margin-left: 20px;
     text-decoration: underline;
 }
+
+
+.flex-control-nav {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.flex-control-nav li {
+    margin-right: 10px; 
+}
+
+.flex-control-thumbs img {
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.flex-control-thumbs img:hover, 
+.flex-control-thumbs img.flex-active {
+    border-color: #007bff;
+}
+
+#main-product-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#main-product-image:hover {
+    transform: scale(1.05); 
+    opacity: 0.9; 
+}
