@@ -1,12 +1,12 @@
 const products = [
-    { image: "../images/dashboard/DellLatitude1st_img.jpg", name: "Acer Laptop", price: 999, category: "Laptop", brand: "Acer", processor: "Intel" },
-    { image: "../images/dashboard/Apple_img.jpg", name: "Dell G15 5530", price: 2999, category: "Laptop", brand: "Dell", processor: "AMD" },
-    { image: "../images/dashboard/Acer_img.jpg", name: "Dell Latitude 5450", price: 799, category: "Laptop", brand: "Dell", processor: "Intel" },
-    { image: "../images/dashboard/hp_image.jpg", name: "HP Pavilion", price: 799, category: "Laptop", brand: "HP", processor: "Intel" },
-    { image: "../images/dashboard/DellLatitude2nd_img.jpg", name: "Sony Vaio", price: 799, category: "Laptop", brand: "Sony", processor: "Intel" },
-    { image: "../images/dashboard/DellLatitude1st_img.jpg", name: "MacBook Air", price: 1299, category: "MacBook", brand: "Apple", processor: "Apple Chip" },
-    { image: "../images/dashboard/Dellg15_img.jpg", name: "MacBook Pro", price: 1999, category: "MacBook", brand: "Apple", processor: "Apple Chip" },
-    { image: "../images/dashboard/Ipad-air-2-1.jpg", name: "Apple iPad Air 2", price: 1200, category: "IPad", brand: "Apple", processor: "Apple Chip" }
+    { image: "../images/dashboard/DellLatitude1st_img.jpg", name: "Acer Laptop", price: 999, category: "Laptop", brand: "Acer", processor: "Intel", background:"../images/dashboard/mackbook-background.webp" },
+    { image: "../images/dashboard/Apple_img.jpg", name: "Dell G15 5530", price: 2999, category: "Laptop", brand: "Dell", processor: "AMD", background:"../images/dashboard/mackbook-background.webp" },
+    { image: "../images/dashboard/Acer_img.jpg", name: "Dell Latitude 5450", price: 799, category: "Laptop", brand: "Dell", processor: "Intel", background:"../images/dashboard/mackbook-background.webp" },
+    { image: "../images/dashboard/hp_image.jpg", name: "HP Pavilion", price: 799, category: "Laptop", brand: "HP", processor: "Intel" , background:"../images/dashboard/mackbook-background.webp"},
+    { image: "../images/dashboard/DellLatitude2nd_img.jpg", name: "Sony Vaio", price: 799, category: "Laptop", brand: "Sony", processor: "Intel", background:"../images/dashboard/mackbook-background.webp" },
+    { image: "../images/dashboard/DellLatitude1st_img.jpg", name: "MacBook Air", price: 1299, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/mackbook-background.webp" },
+    { image: "../images/dashboard/Dellg15_img.jpg", name: "MacBook Pro", price: 1999, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/mackbook-background.webp" },
+    { image: "../images/dashboard/Ipad-air-2-1.jpg", name: "Apple iPad Air 2", price: 1200, category: "IPad", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/mackbook-background.webp" }
 ];
 
 const productContainer = document.getElementById('product-list');
@@ -75,11 +75,6 @@ function filterProducts() {
 
     const maxPrice = parseInt(priceRange.value);
 
-    console.log('Selected Categories:', selectedCategories);
-    console.log('Selected Brands:', selectedBrands);
-    console.log('Selected Processors:', selectedProcessors);
-    console.log('Max Price:', maxPrice);
-
     const filteredProducts = products.filter(product => {
         const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
         const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
@@ -87,8 +82,6 @@ function filterProducts() {
         const matchesPrice = product.price <= maxPrice;
         return matchesCategory && matchesBrand && matchesProcessor && matchesPrice;
     });
-
-    console.log('Filtered Products:', filteredProducts);
 
     displayProducts(filteredProducts);
 }
@@ -105,7 +98,7 @@ function displayProducts(products) {
             </div>`;
         productContainer.appendChild(noProductsMessage);
     } else {
-        products.forEach(product => {
+        products.forEach((product, index) => {
             const productCard = document.createElement('div');
             productCard.classList.add('col-md-4', 'col-sm-6', 'mb-4');
 
@@ -115,7 +108,7 @@ function displayProducts(products) {
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">₹${product.price}</p>
-                        <a href="#" class="btn btn-primary">Select Options</a>
+                        <a href="/html/product-description.html?id=${index}" class="btn btn-primary">Select Options</a>
                     </div>
                 </div>
             `;

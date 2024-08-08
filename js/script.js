@@ -3,7 +3,7 @@ let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [
     name: 'Laptop on Rent',
     image: '/images/cart/c1.jpg',
     quantity: 2,
-    price: 50
+    price: 900
   }
 ];
 

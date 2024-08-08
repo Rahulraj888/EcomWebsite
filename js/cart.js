@@ -31,10 +31,10 @@ $(document).ready(function() {
         let gst = subtotal * gstRate;
         let total = subtotal + depositFee + gst;
 
-        $('#subtotal').text(`$${subtotal.toFixed(2)}`);
-        $('#deposit-fee').text(`$${depositFee.toFixed(2)}`);
-        $('#gst').text(`$${gst.toFixed(2)}`);
-        $('#total').text(`$${total.toFixed(2)}`);
+        $('#subtotal').text(`₹${subtotal.toFixed(2)}`);
+        $('#deposit-fee').text(`₹${depositFee.toFixed(2)}`);
+        $('#gst').text(`₹${gst.toFixed(2)}`);
+        $('#total').text(`₹${total.toFixed(2)}`);
     }
 
     renderCart();

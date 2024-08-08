@@ -1,0 +1,67 @@
+.background-image-section {
+    background-image: url(/images/dashboard/macbook-background.webp);
+    background-position: center;
+    position: relative;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.background-image-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.background-image-section .heading {
+    color: #fff;
+    text-align: center;
+}
+
+.product-price-range h3 {
+    color: #007bff;
+}
+
+.product-key-features h5,
+.rental-period h5,
+.product-price h4,
+.add-to-cart input,
+.add-to-cart button,
+.product-meta p {
+    margin-top: 20px;
+}
+
+.product-key-features {
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.product-key-features p{
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.add-to-cart input {
+    width: 60px;
+    display: inline-block;
+}
+
+.btn-outline-primary.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-group .btn {
+    margin-right: 10px;
+}
+
+#clear-selection {
+    margin-left: 20px;
+    text-decoration: underline;
+}
