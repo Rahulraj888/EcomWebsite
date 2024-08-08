@@ -103,3 +103,20 @@
     transform: scale(1.05); 
     opacity: 0.9; 
 }
+
+#product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+#product-list .card {
+    flex: 1;
+    max-width: 100%;
+    margin: 0px 30px;
+}
+
+#product-list .col-lg-4 {
+    max-width: 32%;
+}

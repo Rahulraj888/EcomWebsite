@@ -36,6 +36,17 @@ function loadProductDetails() {
         updatePrice(product.price);
         document.querySelector('.product-key-features p').textContent = `Processor: ${product.processor}, Brand: ${product.brand}`;
         document.querySelector('.product-meta p').textContent = `Category: ${product.category}`;
+
+
+        const filteredProducts = products.filter(p => p.category === product.category && p.name !== product.name);
+        let suggestedProducts = filteredProducts.slice(0, 3);
+        // If fewer than 3 products are found, fill with other products
+        if (suggestedProducts.length < 3) {
+            const remainingProducts = products.filter(p => p.name !== product.name && !suggestedProducts.includes(p));
+            suggestedProducts = suggestedProducts.concat(remainingProducts.slice(0, 3 - suggestedProducts.length));
+        }
+        console.log(suggestedProducts);
+        displaySuggestedProducts(suggestedProducts);
     } else {
         alert('Product not found');
     }
@@ -94,3 +105,26 @@ function changeImage(element) {
     var mainImage = document.getElementById('main-product-image');
     mainImage.src = element.src;
 }
+
+
+function displaySuggestedProducts(products) {
+    const productContainer = document.getElementById('product-list');
+    productContainer.innerHTML = '';
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('col-lg-4', 'col-md-6', 'col-sm-12', 'd-flex', 'justify-content-center', 'mb-4');
+        productCard.innerHTML = `
+            <div class="card" style="width: 18rem;">
+                <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${product.name}</h5>
+                    <p class="card-text">₹${product.price}</p>
+                    <a href="/html/product-description.html?id=${encodeURIComponent(product.name)}" class="btn btn-primary">Select Options</a>
+                </div>
+            </div>
+        `;
+        
+        productContainer.appendChild(productCard);
+    });
+}
+
