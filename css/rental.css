@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.rental-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.header-blog {
+    color: #35424a;
+    font-size: 2.5em; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.service-details {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.laptop-description {
+    list-style-type: disc;
+    padding-left: 20px; /* Adjust padding as needed */
+}
+
+.laptop-description li {
+    margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.saving-details {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.saving-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.laptop-details {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.laptop-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
