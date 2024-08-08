@@ -1,12 +1,13 @@
-let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [
-  {
-    name: 'Laptop on Rent',
-    image: '/images/cart/c1.jpg',
-    quantity: 2,
-    price: 900
-  }
-];
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
+// [
+//   {
+//     name: 'Laptop on Rent',
+//     image: '/images/cart/c1.jpg',
+//     quantity: 2,
+//     price: 900
+//   }
+// ];
 function updateCartCount() {
   let cartCountElement = document.getElementById('cart-count');
   if (cartCountElement) {

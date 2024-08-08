@@ -11,22 +11,71 @@ const products = [
 
 function getProductIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
-    return parseInt(params.get('id'));
+    return params.get('id');
 }
 
 function loadProductDetails() {
-    const productId = getProductIdFromUrl();
-    const product = products[productId];
+    const productName = getProductIdFromUrl();
+    const product = products.find(prod => prod.name === productName);
 
     if (product) {
+        const priceElement = document.querySelector('.product-price h4');
+        priceElement.innerHTML = `₹${product.price} <small>Exc GST per month + A Refundable Deposit to be added in Cart</small>`;
         document.querySelector('.background-image-section .heading h1').textContent = product.name;
         document.querySelector('.background-image-section').style.backgroundImage = `url(${product.background})`;
         document.querySelector('.container .img-fluid').src = product.image;
-        document.querySelector('.product-price-range h3').textContent = `₹${product.price}.00`;
+        updatePrice(product.price);
         document.querySelector('.product-key-features p').textContent = `Processor: ${product.processor}, Brand: ${product.brand}`;
         document.querySelector('.product-meta p').textContent = `Category: ${product.category}`;
     } else {
         alert('Product not found');
     }
 }
-document.addEventListener('DOMContentLoaded', loadProductDetails);
+
+function updatePrice(basePrice) {
+    const rentalOptions = document.querySelectorAll('.rental-option');
+    const priceElement = document.querySelector('.product-price h4');
+    const selectedPeriodElement = document.getElementById('selected-period');
+
+    rentalOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            rentalOptions.forEach(opt => opt.classList.remove('active'));
+            this.classList.add('active');
+            const period = this.getAttribute('data-period');
+            selectedPeriodElement.textContent = period;
+
+            let multiplier = 1;
+            if (period === '1 Week') multiplier = 1;
+            else if (period === '15 Days') multiplier = 1.5;
+            else if (period === '1 Month') multiplier = 2;
+            else if (period === '3 Months') multiplier = 5;
+
+            const newPrice = (basePrice * multiplier).toFixed(2);
+            priceElement.innerHTML = `₹${newPrice} <small>Exc GST per month + A Refundable Deposit to be added in Cart</small>`;
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadProductDetails();
+});
+
+
+document.querySelector('.add-to-cart button').addEventListener('click', function() {
+    const productId = getProductIdFromUrl();
+    const product = products[productId];
+
+    const quantity = parseInt(document.querySelector('.quantity-input').value);
+    const selectedPeriod = document.querySelector('.rental-option.active').getAttribute('data-period');
+    const price = parseFloat(document.querySelector('.product-price h4').textContent.replace('₹', ''));
+
+    const cartProduct = {
+        name: product.name,
+        image: product.image,
+        quantity: quantity,
+        price: price,
+        period: selectedPeriod
+    };
+
+    addToCart(cartProduct);
+});
