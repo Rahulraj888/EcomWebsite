@@ -61,12 +61,6 @@
     margin-right: 10px;
 }
 
-#clear-selection {
-    margin-left: 20px;
-    text-decoration: underline;
-}
-
-
 .flex-control-nav {
     display: flex;
     justify-content: flex-start;
@@ -79,8 +73,8 @@
     margin-right: 10px; 
 }
 
-.flex-control-thumbs img {
-    border: 2px solid transparent;
+.main-product-image, .flex-control-thumbs img {
+    border: 2px solid #eee;
     cursor: pointer;
     transition: border-color 0.3s ease;
 }
@@ -92,7 +86,7 @@
 
 #main-product-image {
     max-width: 100%;
-    height: auto;
+    height: 350px;
     border: 1px solid #eee;
     padding: 5px;
     margin-bottom: 20px;

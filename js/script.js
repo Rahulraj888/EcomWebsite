@@ -1,13 +1,5 @@
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-// [
-//   {
-//     name: 'Laptop on Rent',
-//     image: '/images/cart/c1.jpg',
-//     quantity: 2,
-//     price: 900
-//   }
-// ];
 function updateCartCount() {
   let cartCountElement = document.getElementById('cart-count');
   if (cartCountElement) {
@@ -32,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
   loadComponent('/html/footer.html', 'footer');
 });
 
-// Call back mechanism to update cart
 function loadComponent(url, elementId, callback = null) {
   fetch(url)
       .then(response => response.text())

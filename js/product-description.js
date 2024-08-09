@@ -1,13 +1,14 @@
-const products = [
-    { image: "../images/dashboard/acer.jpeg", name: "Acer Laptop", price: 999, category: "Laptop", brand: "Acer", processor: "Intel", background:"../images/dashboard/acerback.jpeg" },
-    { image: "../images/dashboard/g15.webp", name: "Dell G15 5530", price: 2999, category: "Laptop", brand: "Dell", processor: "AMD", background:"../images/dashboard/g15back.jpeg" },
-    { image: "../images/dashboard/latitude.webp", name: "Dell Latitude 5450", price: 799, category: "Laptop", brand: "Dell", processor: "Intel", background:"../images/dashboard/latitudeback.jpeg" },
-    { image: "../images/dashboard/pavilion.webp", name: "HP Pavilion", price: 799, category: "Laptop", brand: "HP", processor: "Intel" , background:"../images/dashboard/pavilionback.jpeg"},
-    { image: "../images/dashboard/vaio.jpeg", name: "Sony Vaio", price: 799, category: "Laptop", brand: "Sony", processor: "Intel", background:"../images/dashboard/vaioback.jpeg" },
-    { image: "../images/dashboard/mackbookair.jpeg", name: "MacBook Air", price: 1299, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/mackbookairback.jpeg" },
-    { image: "../images/dashboard/mackbookpro.jpeg", name: "MacBook Pro", price: 1999, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/mackbookproback.webp" },
-    { image: "../images/dashboard/Ipad-air-2-1.jpg", name: "Apple iPad Air 2", price: 1200, category: "IPad", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/ipadair2back.jpeg" }
-];
+let products = [];
+
+function loadProducts() {
+    fetch('/json/products.json')
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            loadProductDetails(); // Load product details after products are fetched
+        })
+        .catch(error => console.error('Error loading products:', error));
+}
 
 document.querySelector('.add-to-cart button').addEventListener('click', function() {
     const productName = getProductIdFromUrl();
@@ -28,7 +29,6 @@ document.querySelector('.add-to-cart button').addEventListener('click', function
     addToCart(cartProduct);
 });
 
-
 function getProductIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
@@ -43,7 +43,7 @@ function loadProductDetails() {
         priceElement.innerHTML = `₹${product.price} <small>Exc GST per month + A Refundable Deposit to be added in Cart</small>`;
         document.querySelector('.background-image-section .heading h1').textContent = product.name;
         document.querySelector('.background-image-section').style.backgroundImage = `url(${product.background})`;
-        
+
         const mainImageElement = document.getElementById('main-product-image');
         mainImageElement.src = product.image;
 
@@ -56,7 +56,6 @@ function loadProductDetails() {
         updatePrice(product.price);
         document.querySelector('.product-key-features p').textContent = `Processor: ${product.processor}, Brand: ${product.brand}`;
         document.querySelector('.product-meta p').textContent = `Category: ${product.category}`;
-
 
         const filteredProducts = products.filter(p => p.category === product.category && p.name !== product.name);
         let suggestedProducts = filteredProducts.slice(0, 3);
@@ -97,14 +96,13 @@ function updatePrice(basePrice) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadProductDetails();
+    loadProducts(); // Load products when the DOM is ready
 });
 
 function changeImage(element) {
     var mainImage = document.getElementById('main-product-image');
     mainImage.src = element.src;
 }
-
 
 function displaySuggestedProducts(products) {
     const productContainer = document.getElementById('product-list');
@@ -126,4 +124,3 @@ function displaySuggestedProducts(products) {
         productContainer.appendChild(productCard);
     });
 }
-
