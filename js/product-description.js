@@ -28,6 +28,7 @@ document.querySelector('.add-to-cart button').addEventListener('click', function
     };
 
     addToCart(cartProduct);
+    alert("Item successfully added to cart");
 });
 
 //get params from URL
