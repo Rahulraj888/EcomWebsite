@@ -1,16 +1,15 @@
 const products = [
-    { image: "../images/dashboard/DellLatitude1st_img.jpg", name: "Acer Laptop", price: 999, category: "Laptop", brand: "Acer", processor: "Intel", background:"../images/dashboard/macbook-background.webp" },
-    { image: "../images/dashboard/Apple_img.jpg", name: "Dell G15 5530", price: 2999, category: "Laptop", brand: "Dell", processor: "AMD", background:"../images/dashboard/macbook-background.webp" },
-    { image: "../images/dashboard/Acer_img.jpg", name: "Dell Latitude 5450", price: 799, category: "Laptop", brand: "Dell", processor: "Intel", background:"../images/dashboard/macbook-background.webp" },
-    { image: "../images/dashboard/hp_image.jpg", name: "HP Pavilion", price: 799, category: "Laptop", brand: "HP", processor: "Intel" , background:"../images/dashboard/macbook-background.webp"},
-    { image: "../images/dashboard/DellLatitude2nd_img.jpg", name: "Sony Vaio", price: 799, category: "Laptop", brand: "Sony", processor: "Intel", background:"../images/dashboard/macbook-background.webp" },
-    { image: "../images/dashboard/DellLatitude1st_img.jpg", name: "MacBook Air", price: 1299, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/macbook-background.webp" },
-    { image: "../images/dashboard/Dellg15_img.jpg", name: "MacBook Pro", price: 1999, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/macbook-background.webp" },
-    { image: "../images/dashboard/Ipad-air-2-1.jpg", name: "Apple iPad Air 2", price: 1200, category: "IPad", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/macbook-background.webp" }
+    { image: "../images/dashboard/acer.jpeg", name: "Acer Laptop", price: 999, category: "Laptop", brand: "Acer", processor: "Intel", background:"../images/dashboard/acerback.jpeg" },
+    { image: "../images/dashboard/g15.webp", name: "Dell G15 5530", price: 2999, category: "Laptop", brand: "Dell", processor: "AMD", background:"../images/dashboard/g15back.jpeg" },
+    { image: "../images/dashboard/latitude.webp", name: "Dell Latitude 5450", price: 799, category: "Laptop", brand: "Dell", processor: "Intel", background:"../images/dashboard/latitudeback.jpeg" },
+    { image: "../images/dashboard/pavilion.webp", name: "HP Pavilion", price: 799, category: "Laptop", brand: "HP", processor: "Intel" , background:"../images/dashboard/pavilionback.jpeg"},
+    { image: "../images/dashboard/vaio.jpeg", name: "Sony Vaio", price: 799, category: "Laptop", brand: "Sony", processor: "Intel", background:"../images/dashboard/vaioback.jpeg" },
+    { image: "../images/dashboard/mackbookair.jpeg", name: "MacBook Air", price: 1299, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/mackbookairback.jpeg" },
+    { image: "../images/dashboard/mackbookpro.jpeg", name: "MacBook Pro", price: 1999, category: "MacBook", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/mackbookproback.webp" },
+    { image: "../images/dashboard/Ipad-air-2-1.jpg", name: "Apple iPad Air 2", price: 1200, category: "IPad", brand: "Apple", processor: "Apple Chip", background:"../images/dashboard/ipadair2back.jpeg" }
 ];
 
 document.querySelector('.add-to-cart button').addEventListener('click', function() {
-    alert("inside function");
     const productName = getProductIdFromUrl();
     const product = products.find(prod => prod.name === productName);
 
@@ -25,7 +24,6 @@ document.querySelector('.add-to-cart button').addEventListener('click', function
         price: price,
         period: selectedPeriod
     };
-    alert(cartProduct);
 
     addToCart(cartProduct);
 });
