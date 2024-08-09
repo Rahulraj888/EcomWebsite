@@ -1,6 +1,8 @@
+//load items in the cart dynamically
 $(document).ready(function() {
     let products = cartItems;
 
+    
     function renderCart() {
         console.log("in render cart");
         let cartItemsList = $('#cart-items');
@@ -60,13 +62,16 @@ $(document).ready(function() {
         renderCart();
     });
 
+    //increase quantity
     $('#cart-items').on('click', '.increase-quantity', function() {
         let index = $(this).data('index');
         cartItems[index].quantity += 1;
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         renderCart();
-    });
+    }); 
 
+
+    //decrease quantity
     $('#cart-items').on('click', '.decrease-quantity', function() {
         let index = $(this).data('index');
         if (cartItems[index].quantity > 1) {

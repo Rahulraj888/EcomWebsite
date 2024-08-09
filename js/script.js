@@ -1,3 +1,4 @@
+//maintain cart items
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 function updateCartCount() {
@@ -19,11 +20,13 @@ function removeFromCart(index) {
   updateCartCount();
 }
 
+//load header and footer
 document.addEventListener('DOMContentLoaded', function() {
   loadComponent('/html/header.html', 'header', updateCartCount);
   loadComponent('/html/footer.html', 'footer');
 });
 
+//load header and footer
 function loadComponent(url, elementId, callback = null) {
   fetch(url)
       .then(response => response.text())

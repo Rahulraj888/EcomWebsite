@@ -1,3 +1,4 @@
+//load carousel
 $(document).ready(function () {
     var silder = $(".owl-carousel");
     silder.owlCarousel({

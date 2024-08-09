@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
         } else {
             emailInput.classList.remove('is-invalid');
-            event.preventDefault(); // Prevent form submission for demonstration purposes
+            event.preventDefault(); // prevent form submission
             var toastElement = document.getElementById('registrationToast');
             var toast = new bootstrap.Toast(toastElement);
             toast.show();
-            emailInput.value = ''; // Clear the input field
+            emailInput.value = ''; // clear the input field
         }
     });
 });

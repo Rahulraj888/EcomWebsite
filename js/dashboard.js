@@ -12,7 +12,7 @@ function loadProducts() {
     fetch('/json/products.json')
         .then(response => response.json())
         .then(data => {
-            products = data;
+            products = data; //load products from json
             setFiltersFromQueryParams();
             filterProducts();
         })
@@ -29,6 +29,7 @@ function getQueryParams() {
     };
 }
 
+//get params from URL
 function setFiltersFromQueryParams() {
     const params = getQueryParams();
 
@@ -62,6 +63,7 @@ processorFilters.forEach(filter => {
     filter.addEventListener('change', filterProducts);
 });
 
+//filter out products based on filters selected
 function filterProducts() {
     const selectedCategories = Array.from(categoryFilters)
         .filter(filter => filter.checked)
@@ -88,6 +90,7 @@ function filterProducts() {
     displayProducts(filteredProducts);
 }
 
+//display products
 function displayProducts(products) {
     productContainer.innerHTML = '';
 

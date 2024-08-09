@@ -4,12 +4,13 @@ function loadProducts() {
     fetch('/json/products.json')
         .then(response => response.json())
         .then(data => {
-            products = data;
+            products = data; //get products list from json
             loadProductDetails(); // Load product details after products are fetched
         })
         .catch(error => console.error('Error loading products:', error));
 }
 
+//add items to cart
 document.querySelector('.add-to-cart button').addEventListener('click', function() {
     const productName = getProductIdFromUrl();
     const product = products.find(prod => prod.name === productName);
@@ -29,15 +30,18 @@ document.querySelector('.add-to-cart button').addEventListener('click', function
     addToCart(cartProduct);
 });
 
+//get params from URL
 function getProductIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
 }
 
+//load product details
 function loadProductDetails() {
     const productName = getProductIdFromUrl();
-    const product = products.find(prod => prod.name === productName);
+    const product = products.find(prod => prod.name === productName); //filter out selected products
 
+    //display details of product
     if (product) {
         const priceElement = document.querySelector('.product-price h4');
         priceElement.innerHTML = `₹${product.price} <small>Exc GST per month + A Refundable Deposit to be added in Cart</small>`;
@@ -53,13 +57,16 @@ function loadProductDetails() {
             thumbnailImages[1].src = product.background;  
         }
 
-        updatePrice(product.price);
+        updatePrice(product.price); //updated price 
         document.querySelector('.product-key-features p').textContent = `Processor: ${product.processor}, Brand: ${product.brand}`;
         document.querySelector('.product-meta p').textContent = `Category: ${product.category}`;
-
+        
         const filteredProducts = products.filter(p => p.category === product.category && p.name !== product.name);
+
+        //code to suggest product
         let suggestedProducts = filteredProducts.slice(0, 3);
-        // If fewer than 3 products are found, fill with other products
+        // if we don't have products of same category add other products
+        //TODO add based on category
         if (suggestedProducts.length < 3) {
             const remainingProducts = products.filter(p => p.name !== product.name && !suggestedProducts.includes(p));
             suggestedProducts = suggestedProducts.concat(remainingProducts.slice(0, 3 - suggestedProducts.length));
@@ -71,6 +78,7 @@ function loadProductDetails() {
     }
 }
 
+//update price based on rental time
 function updatePrice(basePrice) {
     const rentalOptions = document.querySelectorAll('.rental-option');
     const priceElement = document.querySelector('.product-price h4');
@@ -99,11 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProducts(); // Load products when the DOM is ready
 });
 
+//select main 
 function changeImage(element) {
     var mainImage = document.getElementById('main-product-image');
     mainImage.src = element.src;
 }
 
+//display suggested products
 function displaySuggestedProducts(products) {
     const productContainer = document.getElementById('product-list');
     productContainer.innerHTML = '';
